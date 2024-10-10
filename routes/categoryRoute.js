@@ -12,6 +12,7 @@ router.route('/category')
 
 // Route to delete a category by ID
 router.route('/category/:id')
-  .delete(auth, authAdmin, categoryController.deleteCategory);
+  .delete(auth, authAdmin, categoryController.deleteCategory)
+  .put(auth,authAdmin,categoryController.updateCategory)
 
 export default router;
